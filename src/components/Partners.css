@@ -1,0 +1,49 @@
+/* src/components/Partners.css */
+
+.partners-section {
+    background-color: #ffffff;
+    padding: 4rem 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.partners-section .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.partners-heading {
+    font-size: 1.25rem;
+    color: #4b5563;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.partners-heading strong {
+    color: #111827;
+    font-weight: 700;
+}
+
+.partners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem 3rem;
+}
+
+/* CORRECTED LOGO STYLE */
+.partner-logo {
+    height: 36px;
+    max-width: 160px;
+    /* The 'filter' and 'opacity' properties have been removed. */
+    /* We only keep the transition for the subtle scale effect. */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* CORRECTED HOVER EFFECT */
+.partner-logo:hover {
+    /* Now, the only effect on hover is a slight enlargement. */
+    transform: scale(1.05);
+}

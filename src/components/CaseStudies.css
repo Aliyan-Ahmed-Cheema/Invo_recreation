@@ -1,0 +1,68 @@
+
+.case-studies-section {
+    background-color: white;
+    padding: 5rem 0;
+}
+/* Reusing the .section-header and button styles from Services.css for consistency */
+.case-studies-section .section-header {
+    display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;
+}
+.case-studies-section .section-header h2 {
+    font-size: 2.25rem; font-weight: 700; margin: 0;
+}
+.case-studies-section .section-header h2 span { color: #2563eb; }
+
+.case-studies-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+}
+
+.case-study-card {
+    display: block; text-decoration: none; color: inherit;
+    border-radius: 16px; overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+.case-study-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-image-wrapper { position: relative; }
+.card-image-wrapper img {
+    width: 100%; height: 250px; object-fit: cover; display: block;
+}
+.card-tag {
+    position: absolute; top: 1rem; right: 1rem;
+    background-color: #2563eb; color: white;
+    padding: 0.3rem 0.8rem; border-radius: 9999px;
+    font-size: 0.8rem; font-weight: 600;
+}
+
+.card-content-wrapper { padding: 1.5rem; }
+.card-content-wrapper p {
+    color: #6b7280; margin: 0 0 0.5rem 0; font-weight: 500;
+}
+.card-content-wrapper h3 {
+    font-size: 1.25rem; font-weight: 700;
+    line-height: 1.4; margin: 0 0 1.5rem 0;
+    height: 3.5em; /* Set a fixed height to align footers (approx 2 lines) */
+}
+
+.card-footer {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 1.5rem; border-top: 1px solid #e5e7eb;
+}
+.client-logo { height: 24px; }
+
+/* Using a specific class to avoid conflicts */
+.arrow-circle-cs {
+    display: flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px; border-radius: 50%;
+    background-color: #f3f4f6; color: #1f2937; font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+.case-study-card:hover .arrow-circle-cs {
+    background-color: #2563eb; color: white;
+    transform: rotate(-45deg);
+}

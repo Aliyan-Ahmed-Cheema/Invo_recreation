@@ -1,0 +1,235 @@
+.header-wrapper {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: white;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* src/components/Header.css */
+
+/* Replace ALL previous .header-main, .header-logo-container, .header-nav-container, etc., with these styles */
+.header-main {
+  display: flex;
+  justify-content: space-between; /* This is key: it pushes the logo left, button right, and centers the nav in the space between */
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e5e7eb;
+  position: relative;
+  z-index: 101;
+  background-color: white;
+}
+
+.logo-link {
+  flex-shrink: 0; /* Prevent logo from shrinking */
+}
+.logo {
+  height: 2rem;           /* Adjust this value smaller as needed */
+  max-height: 2rem;       /* Ensures it doesn't exceed this */
+  width: auto;            /* Keeps aspect ratio */
+  display: block;
+  filter: none !important;
+  box-shadow: none !important;
+  color: inherit !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: none;
+}
+
+
+
+
+/* This is a new class for the menu layout */
+.mega-menu-content-area.full-width {
+    grid-template-columns: 300px 1fr;
+}
+
+
+/* --- Ensure the rest of your styles from the previous step are present --- */
+/* (e.g., .header-wrapper, .mega-menu-overlay, .sidebar, .main-content, etc.) */
+
+/* And ensure the portfolio styles are there */
+.content-grid-portfolio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.portfolio-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.portfolio-item:hover { background-color: #f9fafb; }
+.portfolio-item-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
+.portfolio-item h4 { margin: 0; font-weight: 700; color: #1f2937; }
+.portfolio-item p { margin: 0; font-size: 0.875rem; color: #6b7280; }
+.portfolio-tag { font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.6rem; border-radius: 9999px; color: white; }
+.portfolio-tag.fintech { background-color: #ef4444; }
+.portfolio-tag.ecommerce { background-color: #22c55e; }
+.portfolio-tag.blockchain { background-color: #8b5cf6; }
+.portfolio-tag.healthcare { background-color: #3b82f6; }
+
+/* --- ADD THESE NEW STYLES FOR THE PORTFOLIO SECTION --- */
+
+.content-grid-portfolio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.portfolio-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.portfolio-item:hover {
+  background-color: #f9fafb; /* gray-50 */
+}
+
+.portfolio-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-item h4 {
+  margin: 0;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.portfolio-item p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.portfolio-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  color: white;
+}
+
+/* Colored Tags */
+.portfolio-tag.fintech { background-color: #ef4444; } /* Red */
+.portfolio-tag.ecommerce { background-color: #22c55e; } /* Green */
+.portfolio-tag.blockchain { background-color: #8b5cf6; } /* Violet */
+.portfolio-tag.healthcare { background-color: #3b82f6; } /* Blue */
+
+.logo { height: 1 rem; }
+.nav-links { display: flex; list-style: none; gap: 2rem; margin: 0; padding: 0; }
+.nav-links button, .nav-links a { font-weight: 600; color: #374151; cursor: pointer; background: none; border: none; font-size: 1rem; padding: 0.5rem; }
+.contact-button { background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; font-weight: 600; text-decoration: none; }
+
+/* The actual dropdown menu. Positioned absolutely to overlay the page */
+.mega-menu-overlay {
+  position: absolute;
+  top: 100%; /* Position it right below the header-main */
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 100; /* Below the main header bar but above page content */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-1rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.mega-menu-content-area {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 300px 1fr 250px;
+  gap: 2rem;
+}
+
+.sidebar { border-right: 1px solid #e5e7eb; padding-right: 2rem; }
+.sidebar-item { display: flex; align-items: center; width: 100%; text-align: left; padding: 1rem; border-radius: 8px; background: none; border: none; cursor: pointer; gap: 1rem; }
+.sidebar-item.active { background-color: #f3f4f6; }
+.sidebar-item .icon { font-size: 1.25rem; }
+.sidebar-item .arrow { margin-left: auto; font-weight: bold; color: #9ca3af; }
+.sidebar-item.active .arrow { color: #2563eb; }
+
+.main-content .content-grid-links { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.main-content .content-grid-links a { text-decoration: none; color: inherit; padding: 0.5rem; border-radius: 6px; }
+.main-content .content-grid-links a:hover { background-color: #f9fafb; }
+.main-content .content-grid-links h4 { margin: 0 0 0.25rem 0; color: #1f2937; }
+.main-content .content-grid-links p { margin: 0; font-size: 0.875rem; color: #6b7280; }
+
+.main-content .content-grid-tags { display: flex; flex-wrap: wrap; gap: 1rem; }
+.main-content .content-grid-tags a { text-decoration: none; background-color: #f3f4f6; padding: 0.75rem 1.25rem; border-radius: 8px; font-weight: 500; }
+
+.side-card { background-color: #f3f4f6; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; }
+.side-card h4 { font-weight: 700; margin-top: 0; }
+.side-card p { color: #6b7280; flex-grow: 1; }.side-card .side-card-cta { display: block; background-color: #2563eb; color: white; text-align: center; padding: 0.75rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+
+/* Add these styles to your existing Header.css */
+
+/* Special card in the sidebar for 'Hire Dev' */
+.sidebar-cta-card {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  background-color: #eef2ff; /* indigo-100 */
+  border-radius: 8px;
+  border: 1px solid #c7d2fe; /* indigo-200 */
+}
+.sidebar-cta-card h4 {
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+  color: #1f2937;
+}
+.sidebar-cta-card a {
+  display: block;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Styles for the static column layout of the 'Company' menu */
+.static-columns-container {
+  grid-column: 1 / span 2; /* Make it span the first two columns */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.static-column h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+.static-column a {
+  display: block;
+  text-decoration: none;
+  color: #6b7280;
+  font-size: 1rem;
+}
+.static-column a:hover {
+  color: #2563eb;
+}
+
+/* A modifier to adjust the grid when there is no side card */
+.mega-menu-content-area.no-side-card {
+  grid-template-columns: 300px 1fr; /* Adjust grid when no side card */
+}

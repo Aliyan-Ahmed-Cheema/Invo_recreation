@@ -1,0 +1,34 @@
+/* src/index.css */
+
+/* Use Tailwind's preflight styles to reset browser defaults */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Set global page styles */
+
+
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: 'Inter', sans-serif; /* A modern, clean font similar to the site's */
+  background-color: #ffffff; /* Set the default background to white */
+  color: #111827; /* A dark gray for default text, not pure black */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* A helper class we might use */
+/*.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}*/

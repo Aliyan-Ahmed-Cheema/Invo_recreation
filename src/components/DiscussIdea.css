@@ -1,0 +1,67 @@
+
+.discuss-idea-section {
+    padding: 2rem 0; /* Add some padding above and below */
+}
+
+.discuss-idea-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    border-radius: 16px;
+    background-color: #1e3a8a; /* A dark blue color */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Adding the subtle background pattern from the site */
+    position: relative;
+    overflow: hidden;
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 0);
+    background-size: 20px 20px;
+}
+
+.discuss-text-content h3 {
+    margin: 0;
+    font-size: 1.5rem; /* 24px */
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.discuss-text-content h2 {
+    margin: 0;
+    font-size: 2.25rem; /* 36px */
+    font-weight: 700;
+}
+
+.discuss-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 9999px;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.discuss-button:hover {
+    background-color: white;
+    color: #1e3a8a;
+}
+
+.discuss-button .arrow-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #2563eb;
+    color: white;
+    font-size: 1.5rem;
+}

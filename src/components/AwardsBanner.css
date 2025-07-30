@@ -1,0 +1,30 @@
+
+.awards-banner-section {
+    background-color: #f9fafb; /* Light gray background */
+    padding: 2.5rem 0;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.awards-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-around; /* Distributes items evenly */
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 2rem;
+}
+
+.award-logo-wrapper img {
+    height: 28px; /* Normalize logo height */
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.award-logo-wrapper img:hover {
+    filter: none;
+    opacity: 1;
+}

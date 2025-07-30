@@ -1,0 +1,89 @@
+/* src/components/TechStack.css */
+
+.tech-stack-section {
+    background-color: white;
+    padding: 5rem 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Header and Search Bar */
+.tech-header {
+    text-align: center; max-width: 800px; margin: 0 auto 3rem auto;
+}
+.tech-header h2 {
+    font-size: 2.25rem; font-weight: 700; margin: 0;
+}
+.tech-header h2 span { color: #2563eb; }
+.tech-header p {
+    font-size: 1.125rem; color: #4b5563; margin: 1rem 0 2rem 0; line-height: 1.6;
+}
+.search-bar {
+    position: relative; max-width: 500px; margin: 0 auto;
+}
+.search-bar input {
+    width: 100%; height: 56px; border-radius: 9999px; border: 1px solid #d1d5db;
+    padding: 0 2rem 0 3.5rem; font-size: 1rem; box-sizing: border-box;
+}
+.search-bar::before {
+    content: '🔍'; position: absolute; top: 50%; left: 1.5rem; transform: translateY(-50%); font-size: 1.2rem;
+}
+
+/* Tabs Navigation */
+.tech-tabs-nav-wrapper {
+    position: sticky; top: 80px; background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px); z-index: 50; padding: 1rem 0;
+    margin-bottom: 3rem; border-radius: 9999px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+}
+.tech-tabs-nav {
+    display: flex; justify-content: center; flex-wrap: nowrap; overflow-x: auto;
+    gap: 0.5rem; padding: 0 1rem;
+}
+.tech-tabs-nav button {
+    padding: 0.75rem 1.5rem; border-radius: 9999px; border: none;
+    background: transparent; font-size: 1rem; font-weight: 600;
+    cursor: pointer; transition: all 0.2s ease; flex-shrink: 0;
+    color: #4b5563;
+}
+.tech-tabs-nav button.active {
+    background-color: #2563eb; color: white;
+}
+
+/* Scrollable Icon Container */
+.tech-icons-scroll-container {
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+.tech-icons-scroll-container::-webkit-scrollbar { width: 8px; }
+.tech-icons-scroll-container::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+.tech-icons-scroll-container::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
+.tech-icons-scroll-container::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+
+.tech-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 3rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- THIS IS THE CORRECTED PART --- */
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+/* Style the <img> tag directly */
+.tech-item img {
+    height: 48px;
+    width: 48px;
+    object-fit: contain;
+}
+.tech-item span {
+    font-weight: 600;
+    color: #374151;
+}

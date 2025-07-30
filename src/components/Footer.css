@@ -1,0 +1,119 @@
+/* src/components/Footer.css */
+
+.footer-wrapper {
+    position: relative;
+    width: 100%; /* Ensures the entire component wrapper is full-width */
+}
+
+/* --- Main Dark Blue Section --- */
+.main-footer {
+    width: 100%; /* **FIX**: Forces this section to fill the screen width */
+    background-color: #0a142f; /* The dark navy blue */
+    color: #e5e7eb; /* A light grey for text */
+    padding: 5rem 0 3rem 0;
+    box-sizing: border-box; /* Ensures padding doesn't add to the width */
+}
+.main-footer .container {
+    max-width: 1280px; margin: 0 auto; padding: 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Column 1: Contact */
+.footer-col-contact .contact-item {
+    display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;
+}
+.icon-circle {
+    flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%;
+    background-color: #2563eb; color: white;
+    display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+}
+.contact-item span {
+    display: block; font-size: 0.875rem; color: #9ca3af;
+}
+.contact-item a {
+    color: white; text-decoration: none; font-weight: 600;
+}
+.rating-section, .socials-section { margin-top: 2rem; }
+.rating-section h5, .socials-section h5 {
+    font-size: 1rem; font-weight: 600; margin: 0 0 1rem 0; color: #9ca3af;
+}
+.rating-icons, .social-icons { display: flex; gap: 1rem; }
+.icon-circle-sm {
+    width: 40px; height: 40px; border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex; align-items: center; justify-content: center;
+}
+.social-icons a {
+    width: 40px; height: 40px; border-radius: 50%;
+    border: 1px solid #4b5563; color: #9ca3af;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; font-size: 1.25rem; transition: all 0.3s ease;
+}
+.social-icons a:hover {
+    background-color: #2563eb; color: white; border-color: #2563eb;
+}
+
+/* Columns 2-5: Links */
+.footer-col-links h4 {
+    font-size: 1.125rem; font-weight: 700; color: white; margin: 0 0 1.5rem 0;
+}
+.footer-col-links ul { list-style: none; padding: 0; margin: 0; }
+.footer-col-links li { margin-bottom: 1rem; }
+.footer-col-links a {
+    color: #9ca3af; text-decoration: none; transition: color 0.3s ease;
+}
+.footer-col-links a:hover { color: white; }
+
+/* Address Row */
+.footer-addresses {
+    display: flex; justify-content: center; gap: 4rem;
+    margin-top: 3rem; flex-wrap: wrap;
+}
+.address-item {
+    display: flex; align-items: center; gap: 1rem;
+}
+.address-item img {
+    height: 24px; border-radius: 4px;
+}
+.address-item p {
+    margin: 0; color: #9ca3af; max-width: 250px;
+}
+
+/* --- Sub-Footer (Bright Blue Section) --- */
+.sub-footer {
+    width: 100%; /* **FIX**: Forces this section to fill the screen width */
+    background-color: #1d4ed8;
+    color: white;
+    padding: 1.5rem 0;
+    box-sizing: border-box;
+}
+.sub-footer-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sub-footer-content p { margin: 0; color: #dbeafe; }
+.sub-footer-links { display: flex; gap: 2rem; }
+.sub-footer-links a { color: white; text-decoration: none; font-weight: 500; }
+.sub-footer-links a:hover { text-decoration: underline; }
+
+/* --- Floating Chat Bubble --- */
+.chat-bubble {
+    position: fixed; bottom: 2rem; right: 2rem;
+    width: 64px; height: 64px; background-color: #2563eb;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000; transition: transform 0.3s ease;
+}
+.chat-bubble:hover { transform: scale(1.1); }
+.chat-bubble img { width: 60%; }

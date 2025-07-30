@@ -1,0 +1,137 @@
+
+.cta-section {
+    background-color: white;
+    padding: 5rem 0;
+}
+
+.cta-section .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header Text Styling */
+.cta-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+}
+.cta-header h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+}
+.cta-header h2 span {
+    color: #2563eb;
+}
+.cta-header p {
+    font-size: 1.125rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* Grid for the three cards */
+.cta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Base style for ALL cards */
+.action-card {
+    border-radius: 16px;
+    padding: 2.5rem;
+    position: relative; /* Needed for the pseudo-element pattern */
+    overflow: hidden; /* Keeps the pattern inside the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.action-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Typography */
+.card-title {
+    font-size: 2.5rem; /* 40px */
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+}
+.card-title span {
+    color: #2563eb;
+}
+.card-description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    flex-grow: 1; /* Pushes the button to the bottom */
+}
+.card-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    align-self: flex-start; /* Aligns button to the left */
+}
+.card-arrow {
+    margin-left: 0.5rem;
+}
+
+/* Variant Styling: Default (Startup & Rescue) */
+.action-card.default {
+    background-color: #f0f5ff; /* A very light blue */
+    color: #1f2937; /* Dark text */
+}
+/* This pseudo-element creates the subtle background pattern */
+.action-card.default::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(209, 213, 219, 0.2) 20%, transparent 20%);
+    background-size: 20px 20px;
+    opacity: 0.5;
+}
+.action-card.default .card-button {
+    border: 1px solid #d1d5db;
+    background-color: white;
+    color: #1f2937;
+}
+.action-card.default .card-button:hover {
+    border-color: #1f2937;
+}
+
+/* Variant Styling: Primary (Enterprise) */
+.action-card.primary {
+    background-color: #2563eb;
+    color: white;
+}
+.action-card.primary .card-title span {
+    color: white; /* The whole title is white */
+}
+.action-card.primary .card-button {
+    background-color: #1e40af; /* A darker blue */
+    color: white;
+}
+.action-card.primary .card-button:hover {
+    background-color: #1c3d9a;
+}
+/* This pseudo-element creates the swirl pattern for the primary card */
+.action-card.primary::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: rotate(45deg);
+}

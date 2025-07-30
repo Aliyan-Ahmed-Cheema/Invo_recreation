@@ -1,0 +1,74 @@
+/* src/components/Industries.css */
+.industries-section {
+    background-color: white; padding: 5rem 0;
+}
+.industries-header {
+    display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem;
+}
+.industries-header h2 {
+    font-size: 2.25rem; font-weight: 700; margin: 0; max-width: 700px;
+}
+.industries-header h2 span { color: #2563eb; }
+/* Using the same slider nav styles from Testimonials for consistency */
+.industries-header .slider-nav { display: flex; gap: 1rem; }
+.industries-header .nav-button {
+    width: 48px; height: 48px; border-radius: 50%;
+    border: 1px solid #d1d5db; background-color: white;
+    font-size: 1.5rem; color: #4b5563;
+    cursor: pointer; transition: all 0.2s ease;
+}
+.industries-header .nav-button:hover {
+    background-color: #2563eb; color: white;
+}
+
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 2rem;
+}
+
+.industry-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    background-color: #f9fafb;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.industry-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-color: #d1d5db;
+}
+
+.card-image-container {
+    height: 200px;
+    position: relative;
+}
+.card-image-container img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.industry-card:hover .card-image-container img {
+    transform: scale(1.05);
+}
+.card-text-content {
+    padding: 1.5rem;
+}
+.card-text-content h4 {
+    font-size: 1.5rem; margin: 0 0 1rem 0;
+}
+.card-text-content ul {
+    list-style: none; padding: 0; margin: 0 0 1.5rem 0;
+    display: flex; flex-direction: column; gap: 0.75rem;
+}
+.card-text-content li {
+    color: #4b5563; position: relative; padding-left: 1.25rem;
+}
+.card-text-content li::before {
+    content: '•';
+    position: absolute; left: 0;
+    color: #2563eb;
+}
+.card-text-content a {
+    color: #2563eb; font-weight: 700; text-decoration: none;
+}
