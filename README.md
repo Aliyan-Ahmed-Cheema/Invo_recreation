@@ -26,7 +26,6 @@ Everything’s covered.
 - **React.js** – Functional components + hooks  
 - **Tailwind CSS** – Utility-first styling  
 - **Framer Motion** – Animations  
-- **React Router** – Page navigation  
 
 ---
 
