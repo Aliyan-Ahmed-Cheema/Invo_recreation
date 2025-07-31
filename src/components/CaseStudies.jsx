@@ -1,4 +1,4 @@
-// src/components/CaseStudies.jsx
+
 import React from 'react';
 import './CaseStudies.css';
 
