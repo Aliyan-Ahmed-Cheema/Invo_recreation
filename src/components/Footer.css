@@ -109,11 +109,27 @@
 
 /* --- Floating Chat Bubble --- */
 .chat-bubble {
-    position: fixed; bottom: 2rem; right: 2rem;
-    width: 64px; height: 64px; background-color: #2563eb;
-    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    position: fixed; /* It stays in place on scroll */
+    bottom: 2rem;
+    right: 2rem;
+    width: 64px;
+    height: 64px;
+    background-color: #2563eb;
+    border-radius: 50%;
+    display: flex; /* Use flexbox to center the icon */
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    z-index: 1000; transition: transform 0.3s ease;
+    z-index: 1000;
+    transition: transform 0.3s ease;
 }
-.chat-bubble:hover { transform: scale(1.1); }
-.chat-bubble img { width: 60%; }
+
+.chat-bubble:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Style the image tag directly */
+.chat-bubble img {
+    width: 60px;
+    height: 60px;
+}

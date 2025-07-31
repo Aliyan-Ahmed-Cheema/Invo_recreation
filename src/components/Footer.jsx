@@ -102,9 +102,8 @@ const Footer = () => {
                 </div>
             </div>
 
-             {/* Floating Chat Bubble */}
-             <a href="#" className="chat-bubble">
-                <img src="/images/chat-icon.svg" alt="Chat with us" />
+             <a href="#" className="chat-bubble" aria-label="Chat with us">
+                <img src="/images/chat-icon.svg" alt="Chat icon" />
             </a>
         </footer>
     );

@@ -1,6 +1,9 @@
 .hero-container {
   position: relative;
   height: 90vh;
+  width: 100%; /* instead of 100vw */
+  margin: 0;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,6 +11,7 @@
   color: white;
   overflow: hidden;
 }
+
 
 .hero-video {
   position: absolute;

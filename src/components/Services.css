@@ -154,3 +154,39 @@
     color: white;
     font-size: 1.5rem;
 }
+
+/* === Responsive layout for mobile === */
+@media (max-width: 768px) {
+  .services-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .services-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-tabs-grid {
+    
+  .service-tabs-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+  .service-content-panel {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .service-links {
+    grid-template-columns: 1fr; /* Stack links vertically */
+  }
+
+  .view-all-button {
+    align-self: stretch;
+    justify-content: center;
+    width: 100%;
+  }
+}

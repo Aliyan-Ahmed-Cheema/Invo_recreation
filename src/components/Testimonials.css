@@ -118,3 +118,24 @@
         transform: translateX(0);
     }
 }
+@media (max-width: 768px) {
+  .testimonial-content-area {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .testimonial-image-wrapper,
+  .testimonial-text-wrapper {
+    width: 100%;
+  }
+
+  .testimonial-quote {
+    padding-left: 2rem;
+  }
+
+  .testimonial-quote::before {
+    left: 0;
+    top: -10px;
+    font-size: 4rem;
+  }
+}
