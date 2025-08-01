@@ -3,7 +3,7 @@ import React from 'react';
 import './Partners.css';
 
 // YOUR IMPORTS - This is the correct way, using your file names and paths.
-import meridio from '../images/Meridio.png';
+import meridio from '../images/meridio.png';
 import column from '../images/column.png';
 import globalreader from '../images/globalreader.png';
 import shield from '../images/shield.png';
