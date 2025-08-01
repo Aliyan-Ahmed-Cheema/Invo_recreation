@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './Testimonials.css';
 
 // Import all the images for the testimonials
-import oliverWolffImg from '../images/oliver-wolff.png';
+import oliverWolffImg from '../images/Oliver-Wolff.png';
 import davidSmithImg from '../images/david-smith.webp';
 import ronZabelImg from '../images/ron-zabel.png';
 import ryanCarterImg from '../images/ryan-carter.webp';
