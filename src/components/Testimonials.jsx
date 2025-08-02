@@ -1,4 +1,4 @@
-// src/components/Testimonials.jsx
+
 import React, { useState } from 'react';
 import './Testimonials.css';
 
@@ -9,9 +9,7 @@ import ronZabelImg from '../images/ron-zabel.png';
 import ryanCarterImg from '../images/ryan-carter.webp';
 import chrisDominguezImg from '../images/chris-dominguez.webp';
 
-// Import company logos if you have them as SVG/PNG
-// For this example, we'll use text, but importing an image is better.
-// import kindeLogo from '../images/logos/kinde.svg';
+
 
 const testimonialsData = [
     {

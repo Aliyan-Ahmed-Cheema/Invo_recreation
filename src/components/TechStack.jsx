@@ -1,4 +1,4 @@
-// src/components/TechStack.jsx
+
 import React, { useState } from 'react';
 import './TechStack.css';
 import { techStackData } from './techStackData'; // Import the simple data file

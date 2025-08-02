@@ -1,4 +1,4 @@
-// src/components/Header.jsx
+
 import React, { useState, useEffect } from 'react';
 import './Header.css';
 import { menuData } from './menuData'; // Assuming menuData.js is in the same folder
@@ -50,6 +50,21 @@ const Header = () => {
     const [activeSubMenu, setActiveSubMenu] = useState(null); // For desktop mega-menu sidebar selection
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Toggles the entire mobile menu panel
     const [openMobileSubMenu, setOpenMobileSubMenu] = useState(null); // Tracks the active accordion item in mobile
+    const [isScrolled, setIsScrolled] = useState(false); // <--  State to track scroll position
+
+    // Effect for handling header background on scroll
+    useEffect(() => {
+        const handleScroll = () => {
+            // Set isScrolled to true if user scrolls down more than 10px, false otherwise
+            setIsScrolled(window.scrollY > 10);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        // Clean up the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []); // Empty array ensures this effect runs only once on mount
 
     // Effect to close the mobile menu if the window is resized to desktop width
     useEffect(() => {
@@ -78,7 +93,8 @@ const Header = () => {
     const currentMenuData = activeMenu ? menuData[activeMenu] : null;
 
     return (
-        <header className={`header-wrapper ${isMobileMenuOpen ? 'mobile-menu-active' : ''}`} onMouseLeave={handleMenuLeave}>
+        // --- MODIFIED: Added isScrolled check to className ---
+        <header className={`header-wrapper ${isScrolled ? 'scrolled' : ''} ${isMobileMenuOpen ? 'mobile-menu-active' : ''}`} onMouseLeave={handleMenuLeave}>
             <div className="header-main">
                 <a href="/" className="logo-link">
                     <img src={logo} alt="InvoZone Logo" className="logo" />

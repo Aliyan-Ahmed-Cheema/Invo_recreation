@@ -1,4 +1,4 @@
-// src/components/DiscussIdea.jsx
+
 import React from 'react';
 import './DiscussIdea.css';
 

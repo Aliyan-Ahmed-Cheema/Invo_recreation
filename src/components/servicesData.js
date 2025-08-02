@@ -1,12 +1,12 @@
-// src/servicesData.js
+
 
 // Import all the icons we will need
 import productEngIcon from '../images/product-engineering-icon.svg';
 import dataAIIcon from '../images/data-ai-icon.svg';
 import hireDevIcon from '../images/hire-dev-icon.svg';
-import devopsIcon from '../images/devops-icon.svg'; // Assuming you have this
-import emergingIcon from '../images/emerging-tech-icon.svg'; // Assuming you have this
-import blockchainIcon from '../images/blockchain-icon.svg'; // Assuming you have this
+import devopsIcon from '../images/devops-icon.svg'; 
+import emergingIcon from '../images/emerging-tech-icon.svg'; 
+import blockchainIcon from '../images/blockchain-icon.svg'; 
 
 import rubyIcon from '../images/ruby.svg';
 import reactIcon from '../images/react.svg';

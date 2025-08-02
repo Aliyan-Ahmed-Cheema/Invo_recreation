@@ -1,25 +1,36 @@
+/* Base header */
 .header-wrapper {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: 100;
-  background: white;
-  margin: 0;
-  padding: 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 50;
+  color: white;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+/* When scrolled */
+.header-wrapper.scrolled {
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #e5e7eb;
+  color: black;
 }
 
 
-/* Replace ALL previous .header-main, .header-logo-container, .header-nav-container, etc., with these styles */
+
 .header-main {
   display: flex;
-  justify-content: space-between; /* This is key: it pushes the logo left, button right, and centers the nav in the space between */
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid transparent; 
   position: relative;
   z-index: 101;
-  background-color: white;
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out;
 }
 
 .logo-link {
@@ -40,15 +51,10 @@
 
 
 
-
-/* This is a new class for the menu layout */
 .mega-menu-content-area.full-width {
     grid-template-columns: 300px 1fr;
 }
 
-
-/* --- Ensure the rest of your styles from the previous step are present --- */
-/* (e.g., .header-wrapper, .mega-menu-overlay, .sidebar, .main-content, etc.) */
 
 /* And ensure the portfolio styles are there */
 .content-grid-portfolio {
@@ -73,7 +79,6 @@
 .portfolio-tag.blockchain { background-color: #8b5cf6; }
 .portfolio-tag.healthcare { background-color: #3b82f6; }
 
-/* --- ADD THESE NEW STYLES FOR THE PORTFOLIO SECTION --- */
 
 .content-grid-portfolio {
   display: grid;
@@ -177,8 +182,6 @@
 .side-card { background-color: #f3f4f6; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; }
 .side-card h4 { font-weight: 700; margin-top: 0; }
 .side-card p { color: #6b7280; flex-grow: 1; }.side-card .side-card-cta { display: block; background-color: #2563eb; color: white; text-align: center; padding: 0.75rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
-
-/* Add these styles to your existing Header.css */
 
 /* Special card in the sidebar for 'Hire Dev' */
 .sidebar-cta-card {
@@ -359,4 +362,76 @@
       font-weight: 600;
       text-decoration: none;
   }
+}
+
+/* 1. STYLES FOR THE 'INDUSTRIES' SECTION (Who We Serve) */
+.main-content .content-grid-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.main-content .content-grid-links a {
+  display: block; /* Makes the entire area clickable */
+  text-decoration: none;
+  color: inherit;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.main-content .content-grid-links a:hover {
+  background-color: #f9fafb; /* Light gray on hover */
+}
+
+.main-content .content-grid-links h4 {
+  margin: 0 0 0.25rem 0;
+  font-weight: 700;
+  color: #1f2937; /* Dark gray for title */
+  font-size: 1rem;
+}
+
+.main-content .content-grid-links p {
+  margin: 0;
+  font-size: 0.875rem; /* 14px */
+  color: #6b7280; /* Lighter gray for description */
+}
+
+
+/* 2. STYLES FOR THE 'HIRE DEV' SECTION (Tag-like buttons) */
+.main-content .content-grid-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-content: flex-start;
+}
+
+.main-content .content-grid-tags a {
+  text-decoration: none;
+  background-color: #f3f4f6; /* Light gray background */
+  color: #374151;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #e5e7eb; /* Subtle border */
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.main-content .content-grid-tags a:hover {
+  background-color: #e5e7eb; /* Darken on hover */
+  border-color: #d1d5db;
+}
+
+/* Header base state */
+.header-wrapper .header-main {
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.3s ease, border-bottom-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* When scrolled down */
+.header-wrapper.scrolled .header-main {
+  background-color: white;
+  border-bottom-color: #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07);
 }

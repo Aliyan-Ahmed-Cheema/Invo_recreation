@@ -1,7 +1,7 @@
-// src/components/Services.jsx
+
 import React, { useState } from 'react';
 import './Services.css';
-import { servicesData } from './servicesData'; // Import our new data file
+import { servicesData } from './servicesData'; // Import the data file
 
 const Services = () => {
     // Set the first service as the default active tab

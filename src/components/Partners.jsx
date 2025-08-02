@@ -1,8 +1,8 @@
-// src/components/Partners.jsx
+
 import React from 'react';
 import './Partners.css';
 
-// YOUR IMPORTS - This is the correct way, using your file names and paths.
+// YOUR IMPORTS -
 import meridio from '../images/meridio.png';
 import column from '../images/column.png';
 import globalreader from '../images/globalreader.png';
@@ -16,7 +16,7 @@ import stitch from '../images/stitch.png';
 
 
 const Partners = () => {
-    // This array now uses YOUR variable names (e.g., `meridio`, not `meridioLogo`)
+    
     const partnerLogos = [
         { src: meridio, alt: 'Meridio' },
         { src: column, alt: 'Column' },
@@ -38,7 +38,7 @@ const Partners = () => {
                 </h2>
 
                 <div className="partners-grid">
-                    {/* The rest of this code was correct and maps over the data */}
+                    
                     {partnerLogos.map((logo, index) => (
                         <img
                             key={index}

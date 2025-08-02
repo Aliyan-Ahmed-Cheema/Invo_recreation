@@ -1,4 +1,3 @@
-/* src/components/TechStack.css */
 
 .tech-stack-section {
     background-color: white;
@@ -69,7 +68,7 @@
     margin: 0 auto;
 }
 
-/* --- THIS IS THE CORRECTED PART --- */
+
 .tech-item {
     display: flex;
     flex-direction: column;

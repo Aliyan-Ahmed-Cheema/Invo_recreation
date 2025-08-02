@@ -1,4 +1,3 @@
-// src/menuData.js
 
 export const menuData = {
   "what-we-do": {
